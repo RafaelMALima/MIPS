@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity somadorSingleBit is
+  -- Total de bits das entradas e saidas
+  port (
+    entradaA, entradaB, carry_in : in std_logic;
+    saida, carry_out : out std_logic
+  );
+end entity;
+
+architecture comportamento of somadorSingleBit is
+begin
+saida <= (entradaA XOR entradaB) XOR carry_in;
+carry_out <= (entradaA AND entradaB) OR ((entradaA XOR entradaB) AND carry_in);
+end architecture;
