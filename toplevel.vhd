@@ -40,6 +40,7 @@ architecture arquitetura of toplevel is
 	signal Imediato  : std_logic_vector(15 downto 0);
 	signal SigExt  : std_logic_vector(31 downto 0);
 	signal Funct : std_logic_vector(5 downto 0);
+	signal FromBEQMuxToJRMux: std_logic_vector(31 downto 0);
 	
 -- DESVIO ROM
 
@@ -50,6 +51,7 @@ architecture arquitetura of toplevel is
 	signal ImediatoShiftado : std_logic_vector(27 downto 0);
 	signal EnderecoJMP : std_logic_vector(31 downto 0);
 
+	signal MuxBEQorBNE : std_logic;
 
 
 -- BANCO DE REGISTRADORES
@@ -61,6 +63,7 @@ architecture arquitetura of toplevel is
 	signal DataInRd : std_logic_vector(31 downto 0);
 	signal MuxRtRdOut : std_logic_vector(4 downto 0);
 
+	
 -- RAM 
 	signal RamOUT : std_logic_vector(31 downto 0);
 	
@@ -73,18 +76,22 @@ architecture arquitetura of toplevel is
 	signal EntradaBUla : std_logic_vector(31 downto 0);
 
 	signal UlaSelect : std_logic_vector(3 downto 0);
+	
 
 
-	signal PontosDeControle : std_logic_vector(9 downto 0);
+	signal MuxPCmais4BEQJR : std_logic;
+
+	signal PontosDeControle : std_logic_vector(13 downto 0);
 	
 -- PontosDeControle
 	signal MuxPCmais4BEQ : std_logic;
-	signal MuxRtRd : std_logic;
+	signal MuxRtRd : std_logic_vector(1 downto 0);
 	signal HabEscritaReg : std_logic;
 	signal MuxRtImediato : std_logic;
-	signal UlaOp : std_logic_vector(1 downto 0);
+	signal UlaOp : std_logic_vector(2 downto 0);
 	signal TipoR : std_logic;
-	signal MuxUlaMem : std_logic;
+	signal MuxUlaMem : std_logic_vector (1 downto 0);
+	signal BNE : std_logic;
 	signal BEQ : std_logic;
 	signal habLeituraMem : std_logic;
 	signal habEscritaMem : std_logic;
@@ -125,11 +132,20 @@ SOMADOR_BRANCH: entity work.somadorGenerico
 		saida => PCMais4MaisShiftado
 	);
 
-MUX_BEQ : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+MUX_BEQ_BNE : entity work.muxGenerico2x1SingleBit
+	port map(
+		entradaA_MUX => ULAFlagEqual,
+		entradaB_Mux => not ULAFlagEqual,
+		seletor_MUX => bne,
+		saida_mux => MuxBEQorBNE
+	);
+
+	
+MUX_BEQ_PCm4 : entity work.muxGenerico2x1 generic map (larguraDados => 32)
 	port map(
 		entradaA_MUX => PCMais4,
 		entradaB_Mux => PCMais4MaisShiftado,
-		seletor_MUX => ULAFlagEqual and BEQ,
+		seletor_MUX => BEQ and MuxBEQorBNE,
 		saida_mux => enderecoBEQ
 	);
 	
@@ -148,10 +164,16 @@ MUX_JMP_BEQ : entity work.muxGenerico2x1 generic map (larguraDados => 32)
 		entradaA_MUX => enderecoBEQ,
 		entradaB_MUX => enderecoJMP,
 		seletor_MUX => MuxPCmais4BEQ,
+		saida_mux => FromBEQMuxToJRMux
+	);
+	
+MUX_JMP_BEQ_JR : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+	port map(
+		entradaA_MUX => FromBEQMuxToJRMux,
+		entradaB_MUX => SaidaRsBancoReg,
+		seletor_MUX => MuxPCmais4BEQJR,
 		saida_mux => proxPC
 	);
-
-
 
 -- BANCO DE REGISTRADORES
 
@@ -160,10 +182,12 @@ addrRegB <= Instruct(20 downto 16);
 addrRegC <= Instruct(15 downto 11);
 
 
-MUX_RT_RD : entity work.muxGenerico2x1 generic map (larguraDados => 5)
+MUX_RT_RD : entity work.muxGenerico4x1 generic map (larguraEntrada => 5)
 	port map(
 		entradaA_MUX => addrRegB,
 		entradaB_MUX => addrRegC,
+		entradaC_MUX => 5d"31",		
+		entradaD_MUX => "00000",
 		seletor_MUX => MuxRtRd,
 		saida_MUX => MuxRtRdOut
 	);
@@ -191,12 +215,13 @@ EXT_SIGNAL : entity work.extensaoDeSinal
 
 				
 -- PontosDeControle
-	MuxPCmais4BEQ <= PontosDeControle(9);
-	MuxRtRd <= PontosDeControle(8);
-	HabEscritaReg <= PontosDeControle(7);
-	MuxRtImediato <= PontosDeControle(6);
-	ulaOp <=PontosDeControle(5 downto 4);
-	MuxUlaMem <= PontosDeControle(3);
+	MuxPCmais4BEQ <= PontosDeControle(13);
+	MuxRtRd <= PontosDeControle(12 downto 11);
+	HabEscritaReg <= PontosDeControle(10);
+	MuxRtImediato <= PontosDeControle(9);
+	UlaOp <=PontosDeControle(8 downto 6);
+	MuxUlaMem <= PontosDeControle(5 downto 4);
+	BNE <= PontosDeControle(3);
 	BEQ <= PontosDeControle(2);
 	habLeituraMem <= PontosDeControle(1);
 	habEscritaMem <= PontosDeControle(0);
@@ -213,6 +238,7 @@ UC_ULA : entity work.UC_ULA
 	port map(
 		ulaOp => UlaOp,
 		funct => Funct,
+		jr => MuxPCmais4BEQJR,
 		ULACtrl => UlaSelect
 	);
 
@@ -246,11 +272,13 @@ MEMORIA_RAM : entity work.memoriaRam
 		clk => CLK
 	);
 
-
-MUX_DATA_IN_BANCO_REG : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+MUX_DATA_IN_BANCO_REG : entity work.muxGenerico4x1 generic map (larguraEntrada => 32)
 	port map(
 		entradaA_MUX => ULAOut,
 		entradaB_MUX => RamOUT,
+		entradaC_MUX(31 downto 16) => Imediato,
+		entradaC_MUX(15 downto 0) => "0000000000000000",
+		entradaD_MUX => PCMais4,
 		seletor_MUX => MuxUlaMem,
 		saida_MUX => DataInRd
 	);
@@ -263,7 +291,6 @@ MUX_LEDS : entity work.muxGenerico2x1 generic map (larguraDados => 32)
 		saida_MUX => LedData
 	);
 
-	
 	
 DEC_H0 :  entity work.conversorHex7Seg
 port map(dadoHex => LedData(3 downto 0),
