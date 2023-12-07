@@ -20,6 +20,6 @@ Este projeto consiste de um processador MIPS single cycle, com as seguintes inst
 -    Salto e conecta (jump and link: jal);
 -    Salto por registrador (jump register: jr).
 
-O projeto foi implementado em VHDL, usando a placa FPGA ALTERA 5CEBA4F23C7N
+O projeto foi implementado em VHDL, usando a placa FPGA ALTERA 5CEBA4F23C7N, e o Quartus como IDE.
 
 Para observação do que está acontecendo dentro do processador, os display 7 SEG foram conectados de forma que, de acordo com o switch 0 da placa, eles mostram ou o valor do Program Counter, ou a saída da ULA(Unidade lógica aritmética)
