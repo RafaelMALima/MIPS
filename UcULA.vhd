@@ -34,8 +34,8 @@ begin
 	JR <= '1' when ulaOp = "010" and funct = "001000" else
 			'0';
 			
-	SHFT <= "01" when ulaOp = "010" and funct = "000000" else -- Shlft
-			  "11" when ulaOp = "010" and funct = "000010" else -- Shrt
+	SHFT <= "11" when ulaOp = "010" and funct = "000000" else -- Shlft
+			  "01" when ulaOp = "010" and funct = "000010" else -- Shrt
 			  "00";
 
 end architecture;

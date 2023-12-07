@@ -44,6 +44,10 @@ function initMemory
         tmp(11) := 32x"0C";
         tmp(12) := 32x"0D";
         tmp(13) := 32x"16";
+        tmp(14) := 32x"AAAAAAA3";
+        tmp(15) := 32x"55555551";
+        tmp(16) := 32x"10";
+        tmp(17) := 32x"04";
 
         return tmp;
     end initMemory;

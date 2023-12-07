@@ -17,6 +17,6 @@ end entity;
 
 architecture comportamento of shifter32 is
   begin
-    shiftOUT <= std_logic_vector(shift_left(unsigned(shiftIN), to_integer(unsigned(shamt)))) when direct = '0' else
+    shiftOUT <= std_logic_vector(shift_left(unsigned(shiftIN), to_integer(unsigned(shamt)))) when direct = '1' else
                 std_logic_vector(shift_right(unsigned(shiftIN), to_integer(unsigned(shamt))));
 end architecture;

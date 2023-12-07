@@ -1,0 +1,40 @@
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions
+-- and other software and tools, and its AMPP partner logic
+-- functions, and any output files from any of the foregoing
+-- (including device programming or simulation files), and any
+-- associated documentation or information are expressly subject
+-- to the terms and conditions of the Intel Program License
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+WIDTH=32;
+DEPTH=64;
+ADDRESS_RADIX=DEC;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+      -- Valores iniciais no banco de registradores:
+      -- $t0   (#8) := 0x00
+      -- $t1   (#9) := 0x0A
+      -- $t2  (#10) := 0x0B
+      -- $t3  (#11) := 0x0C
+      -- $t4  (#12) := 0x0D
+      -- $t5  (#13) := 0x16
+      -- $s0  (#14) := 0xAAAAAAA3
+      -- $s1  (#15) := 0x55555551
+      -- $s2  (#16) := 0x01
+      -- $s3  (#17) := 0x04
+
+    0    : 01CF4027; --nor $t0 $t6 $t7     ($t0  := 0x0000000C)
+    1    : 02108800; --slt $s2 $s2 $S3     ($s2  := 0x00000010)
+    2    : 02108800; --slt $s2 $s2 $S3     ($s2  := 0x00000100)
+    3    : 02108802; --srt $s2 $s2 $S2     ($s2  := 0x00000010)
+    4    : 02108000; --slt $s2 $s2 $s2     ($s2  := 0x00000020)
+    5    : 02108000; --slt $s2 $s2 $s2     ($s2  := 0x00000040)
+    [6..63]  : 00000000;
+END;

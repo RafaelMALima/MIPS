@@ -1,5 +1,5 @@
 Analysis & Synthesis report for toplevel
-Thu Dec  7 10:54:54 2023
+Thu Dec  7 13:45:10 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -72,13 +72,12 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  64. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1"
  65. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31"
  66. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0"
- 67. Port Connectivity Checks: "UC_ULA:UC_ULA"
- 68. Port Connectivity Checks: "muxGenerico4x1:MUX_RT_RD"
- 69. Port Connectivity Checks: "shiftLeft2:SHIFT_LEFT_IMEDIATO_JMP"
- 70. Port Connectivity Checks: "registradorGenerico:PC"
- 71. Post-Synthesis Netlist Statistics for Top Partition
- 72. Elapsed Time Per Partition
- 73. Analysis & Synthesis Messages
+ 67. Port Connectivity Checks: "muxGenerico4x1:MUX_RT_RD"
+ 68. Port Connectivity Checks: "shiftLeft2:SHIFT_LEFT_IMEDIATO_JMP"
+ 69. Port Connectivity Checks: "registradorGenerico:PC"
+ 70. Post-Synthesis Netlist Statistics for Top Partition
+ 71. Elapsed Time Per Partition
+ 72. Analysis & Synthesis Messages
 
 
 
@@ -105,7 +104,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec  7 10:54:54 2023       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec  7 13:45:10 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; toplevel                                    ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -227,7 +226,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -266,14 +265,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1068         ;
+; Estimate of Logic utilization (ALMs needed) ; 1354         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 1050         ;
-;     -- 7 input functions                    ; 320          ;
-;     -- 6 input functions                    ; 300          ;
-;     -- 5 input functions                    ; 44           ;
-;     -- 4 input functions                    ; 159          ;
-;     -- <=3 input functions                  ; 227          ;
+; Combinational ALUT usage for logic          ; 1386         ;
+;     -- 7 input functions                    ; 554          ;
+;     -- 6 input functions                    ; 295          ;
+;     -- 5 input functions                    ; 150          ;
+;     -- 4 input functions                    ; 93           ;
+;     -- <=3 input functions                  ; 294          ;
 ;                                             ;              ;
 ; Dedicated logic registers                   ; 1120         ;
 ;                                             ;              ;
@@ -283,8 +282,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 1120         ;
-; Total fan-out                               ; 8847         ;
-; Average fan-out                             ; 3.83         ;
+; Total fan-out                               ; 10851        ;
+; Average fan-out                             ; 4.10         ;
 +---------------------------------------------+--------------+
 
 
@@ -293,67 +292,65 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Entity Name             ; Library Name ;
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |toplevel                                        ; 1050 (5)            ; 1120 (0)                  ; 0                 ; 0          ; 70   ; 0            ; |toplevel                                                                                       ; toplevel                ; work         ;
-;    |ROMMIPS:ROM|                                 ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ROMMIPS:ROM                                                                           ; ROMMIPS                 ; work         ;
-;    |UC_ULA:UC_ULA|                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|UC_ULA:UC_ULA                                                                         ; UC_ULA                  ; work         ;
-;    |ULASomaSub:ULA|                              ; 205 (6)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA                                                                        ; ULASomaSub              ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT0|          ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0                                        ; UlaSingleBit            ; work         ;
+; |toplevel                                        ; 1386 (3)            ; 1120 (0)                  ; 0                 ; 0          ; 70   ; 0            ; |toplevel                                                                                       ; toplevel                ; work         ;
+;    |ROMMIPS:ROM|                                 ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ROMMIPS:ROM                                                                           ; ROMMIPS                 ; work         ;
+;    |UC_ULA:UC_ULA|                               ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|UC_ULA:UC_ULA                                                                         ; UC_ULA                  ; work         ;
+;    |ULASomaSub:ULA|                              ; 351 (9)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA                                                                        ; ULASomaSub              ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT0|          ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0                                        ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT10|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10                                       ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT10|         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT11|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11                                       ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT11|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT12|         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT12|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
 ;       |UlaSingleBit:ULA_SINGLEBIT_BIT13|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT14|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14                                       ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT14|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;       |UlaSingleBit:ULA_SINGLEBIT_BIT15|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT16|         ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16                                       ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT16|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT17|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT17|         ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
 ;       |UlaSingleBit:ULA_SINGLEBIT_BIT18|         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT19|         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19                                       ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT19|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT1|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1                                        ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT1|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1                                        ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
 ;       |UlaSingleBit:ULA_SINGLEBIT_BIT20|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
@@ -369,16 +366,14 @@ https://fpgasoftware.intel.com/eula.
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT23|         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23                                       ; UlaSingleBit            ; work         ;
-;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT23|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT24|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24                                       ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT24|         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
 ;       |UlaSingleBit:ULA_SINGLEBIT_BIT25|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
@@ -394,65 +389,64 @@ https://fpgasoftware.intel.com/eula.
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT28|         ; 9 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28                                       ; UlaSingleBit            ; work         ;
-;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT28|         ; 8 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT29|         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29                                       ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT29|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT2|          ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2                                        ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT2|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2                                        ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT30|         ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT30|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT31|         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31                                       ; UlaSingleBit            ; work         ;
-;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT31|         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31                                       ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT3|          ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3                                        ; UlaSingleBit            ; work         ;
-;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT3|          ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
 ;          |somadorSingleBit:SOMADOR|              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT4|          ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4                                        ; UlaSingleBit            ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT4|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4                                        ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT5|          ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT5|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5                                        ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT6|          ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT6|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6                                        ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT7|          ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT7|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7                                        ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT8|          ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT8|          ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
-;       |UlaSingleBit:ULA_SINGLEBIT_BIT9|          ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT9|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9                                        ; UlaSingleBit            ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
 ;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
-;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
-;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
-;    |bancoReg:BancoReg|                           ; 561 (561)           ; 1024 (1024)               ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bancoReg:BancoReg                                                                     ; bancoReg                ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;       |muxGenerico2x1:MUXUlaOut|                 ; 100 (100)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut                                               ; muxGenerico2x1          ; work         ;
+;       |shifter32:ULAShifter|                     ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter                                                   ; shifter32               ; work         ;
+;    |bancoReg:BancoReg|                           ; 734 (734)           ; 1024 (1024)               ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bancoReg:BancoReg                                                                     ; bancoReg                ; work         ;
 ;    |conversorHex7Seg:DEC_H0|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H0                                                               ; conversorHex7Seg        ; work         ;
 ;    |conversorHex7Seg:DEC_H1|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H1                                                               ; conversorHex7Seg        ; work         ;
 ;    |conversorHex7Seg:DEC_H2|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H2                                                               ; conversorHex7Seg        ; work         ;
@@ -460,15 +454,15 @@ https://fpgasoftware.intel.com/eula.
 ;    |conversorHex7Seg:DEC_H4|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H4                                                               ; conversorHex7Seg        ; work         ;
 ;    |conversorHex7Seg:DEC_H5|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H5                                                               ; conversorHex7Seg        ; work         ;
 ;    |memoriaRAM:MEMORIA_RAM|                      ; 19 (19)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|memoriaRAM:MEMORIA_RAM                                                                ; memoriaRAM              ; work         ;
-;    |muxGenerico2x1:MUX_ENTRADA_ULA|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico2x1:MUX_ENTRADA_ULA                                                        ; muxGenerico2x1          ; work         ;
-;    |muxGenerico2x1:MUX_JMP_BEQ_JR|               ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico2x1:MUX_JMP_BEQ_JR                                                         ; muxGenerico2x1          ; work         ;
+;    |muxGenerico2x1:MUX_ENTRADA_ULA|              ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico2x1:MUX_ENTRADA_ULA                                                        ; muxGenerico2x1          ; work         ;
+;    |muxGenerico2x1:MUX_JMP_BEQ_JR|               ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico2x1:MUX_JMP_BEQ_JR                                                         ; muxGenerico2x1          ; work         ;
 ;    |muxGenerico2x1:MUX_LEDS|                     ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico2x1:MUX_LEDS                                                               ; muxGenerico2x1          ; work         ;
-;    |muxGenerico4x1:MUX_DATA_IN_BANCO_REG|        ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico4x1:MUX_DATA_IN_BANCO_REG                                                  ; muxGenerico4x1          ; work         ;
-;    |muxGenerico4x1:MUX_RT_RD|                    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico4x1:MUX_RT_RD                                                              ; muxGenerico4x1          ; work         ;
+;    |muxGenerico4x1:MUX_DATA_IN_BANCO_REG|        ; 48 (48)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico4x1:MUX_DATA_IN_BANCO_REG                                                  ; muxGenerico4x1          ; work         ;
+;    |muxGenerico4x1:MUX_RT_RD|                    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico4x1:MUX_RT_RD                                                              ; muxGenerico4x1          ; work         ;
 ;    |registradorGenerico:PC|                      ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|registradorGenerico:PC                                                                ; registradorGenerico     ; work         ;
 ;    |somaConstante:incrementaPC|                  ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|somaConstante:incrementaPC                                                            ; somaConstante           ; work         ;
 ;    |somadorGenerico:SOMADOR_BRANCH|              ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|somadorGenerico:SOMADOR_BRANCH                                                        ; somadorGenerico         ; work         ;
-;    |unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS                                            ; unidadeDeControle       ; work         ;
+;    |unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|  ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS                                            ; unidadeDeControle       ; work         ;
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -494,25 +488,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|registradorGenerico:PC|DOUT[0]                                                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|registradorGenerico:PC|DOUT[28]                                                                 ;
-; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |toplevel|registradorGenerico:PC|DOUT[5]                                                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|saida[0]                                             ;
-; 4:1                ; 27 bits   ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25|muxGenerico2x1SingleBit:MUX_INVERTE_B|saida_MUX ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftRight0                                                 ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftRight0                                                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|registradorGenerico:PC|DOUT[29]                                                                 ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |toplevel|registradorGenerico:PC|DOUT[8]                                                                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|saida[4]                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_RT_RD|saida_MUX[4]                                                           ;
+; 4:1                ; 27 bits   ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19|muxGenerico2x1SingleBit:MUX_INVERTE_B|saida_MUX ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftLeft0                                                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftLeft0                                                  ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftRight0                                                 ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftRight0                                                 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftLeft0                                                  ;
-; 4:1                ; 50 bits   ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftRight0                                                 ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_DATA_IN_BANCO_REG|saida_MUX[2]                                               ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_DATA_IN_BANCO_REG|saida_MUX[29]                                              ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_RT_RD|saida_MUX[2]                                                           ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3|muxGenerico4x1SingleBit:MUX_SELETOR|saida_MUX    ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|saida[2]                                             ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[12]                                           ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[21]                                           ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[1]                                            ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[31]                                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftRight0                                                 ;
+; 4:1                ; 50 bits   ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftLeft0                                                  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_DATA_IN_BANCO_REG|saida_MUX[4]                                               ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_DATA_IN_BANCO_REG|saida_MUX[24]                                              ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_RT_RD|saida_MUX[0]                                                           ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28|muxGenerico4x1SingleBit:MUX_SELETOR|saida_MUX   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|saida[3]                                             ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[22]                                           ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[14]                                           ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[31]                                           ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[1]                                            ;
 ; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|saida[6]                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------+
 
@@ -1131,15 +1126,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UC_ULA:UC_ULA"                                                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; shft ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; Port Connectivity Checks: "muxGenerico4x1:MUX_RT_RD" ;
 +--------------+-------+----------+--------------------+
@@ -1178,25 +1164,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff             ; 1120                        ;
 ;     ENA               ; 1090                        ;
 ;     plain             ; 30                          ;
-; arriav_lcell_comb     ; 1051                        ;
+; arriav_lcell_comb     ; 1387                        ;
 ;     arith             ; 60                          ;
 ;         1 data inputs ; 30                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 29                          ;
-;     extend            ; 320                         ;
-;         7 data inputs ; 320                         ;
-;     normal            ; 671                         ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 9                           ;
+;     extend            ; 554                         ;
+;         7 data inputs ; 554                         ;
+;     normal            ; 773                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 29                          ;
-;         2 data inputs ; 120                         ;
-;         3 data inputs ; 47                          ;
-;         4 data inputs ; 130                         ;
-;         5 data inputs ; 44                          ;
-;         6 data inputs ; 300                         ;
+;         1 data inputs ; 62                          ;
+;         2 data inputs ; 123                         ;
+;         3 data inputs ; 58                          ;
+;         4 data inputs ; 84                          ;
+;         5 data inputs ; 150                         ;
+;         6 data inputs ; 295                         ;
 ; boundary_port         ; 70                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 20.00                       ;
-; Average LUT depth     ; 13.28                       ;
+; Max LUT depth         ; 21.00                       ;
+; Average LUT depth     ; 13.79                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1205,7 +1192,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1215,7 +1202,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Dec  7 10:54:45 2023
+    Info: Processing started: Thu Dec  7 13:44:58 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off toplevel -c toplevel
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file shifter.vhd
@@ -1288,7 +1275,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file muxGene
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(21): used implicit default value for signal "entrada" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 21
 Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(22): used implicit default value for signal "saida" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 22
-Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(79): used implicit default value for signal "ULAShift" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 79
 Critical Warning (10920): VHDL Incomplete Partial Association warning at toplevel.vhd(153): port or argument "saida" has 4/32 unassociated elements File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 153
 Warning (10873): Using initial value X (don't care) for net "LEDR[9..8]" at toplevel.vhd(13) File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 13
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 110
@@ -1304,25 +1290,25 @@ Info (12128): Elaborating entity "bancoReg" for hierarchy "bancoReg:BancoReg" Fi
 Info (12128): Elaborating entity "extensaoDeSinal" for hierarchy "extensaoDeSinal:EXT_SIGNAL" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 211
 Info (12128): Elaborating entity "unidadeDeControle" for hierarchy "unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 232
 Info (12128): Elaborating entity "UC_ULA" for hierarchy "UC_ULA:UC_ULA" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 238
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "ULASomaSub:ULA" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 256
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "ULASomaSub:ULA" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 257
 Info (12128): Elaborating entity "shifter32" for hierarchy "ULASomaSub:ULA|shifter32:ULAShifter" File: /home/lemon/Descomp/MIPS_Intermediaria/ULASomaSub.vhd Line: 72
 Info (12128): Elaborating entity "UlaSingleBit" for hierarchy "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0" File: /home/lemon/Descomp/MIPS_Intermediaria/ULASomaSub.vhd Line: 121
 Warning (10541): VHDL Signal Declaration warning at UlaSingleBit.vhd(14): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/lemon/Descomp/MIPS_Intermediaria/UlaSingleBit.vhd Line: 14
 Info (12128): Elaborating entity "somadorSingleBit" for hierarchy "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|somadorSingleBit:SOMADOR" File: /home/lemon/Descomp/MIPS_Intermediaria/UlaSingleBit.vhd Line: 41
 Info (12128): Elaborating entity "muxGenerico4x1SingleBit" for hierarchy "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|muxGenerico4x1SingleBit:MUX_SELETOR" File: /home/lemon/Descomp/MIPS_Intermediaria/UlaSingleBit.vhd Line: 50
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:MEMORIA_RAM" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 266
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:MEMORIA_RAM" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 267
 Warning (10639): VHDL warning at memoriaRam.vhd(24): constant value overflow File: /home/lemon/Descomp/MIPS_Intermediaria/memoriaRam.vhd Line: 24
 Warning (10445): VHDL Subtype or Type Declaration warning at memoriaRam.vhd(24): subtype or type has null range File: /home/lemon/Descomp/MIPS_Intermediaria/memoriaRam.vhd Line: 24
-Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "muxGenerico4x1:MUX_DATA_IN_BANCO_REG" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 277
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DEC_H0" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 297
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "muxGenerico4x1:MUX_DATA_IN_BANCO_REG" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 278
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DEC_H0" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 298
 Info (276014): Found 3 instances of uninferred RAM logic
     Info (276007): RAM logic "memoriaRAM:MEMORIA_RAM|ram" is uninferred due to asynchronous read logic File: /home/lemon/Descomp/MIPS_Intermediaria/memoriaRam.vhd Line: 27
-    Info (276007): RAM logic "bancoReg:BancoReg|registrador" is uninferred due to asynchronous read logic File: /home/lemon/Descomp/MIPS_Intermediaria/bancoRegistradores.vhd Line: 52
+    Info (276007): RAM logic "bancoReg:BancoReg|registrador" is uninferred due to asynchronous read logic File: /home/lemon/Descomp/MIPS_Intermediaria/bancoRegistradores.vhd Line: 56
     Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: /home/lemon/Descomp/MIPS_Intermediaria/ROMMips.vhd Line: 18
-Warning (113028): 46 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: /home/lemon/Descomp/MIPS_Intermediaria/ROMContent.mif Line: 1
+Warning (113028): 43 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: /home/lemon/Descomp/MIPS_Intermediaria/ROMContent.mif Line: 1
     Warning (113026): Memory Initialization File Address 16 is not initialized File: /home/lemon/Descomp/MIPS_Intermediaria/ROMContent.mif Line: 1
     Warning (113027): Addresses ranging from 18 to 30 are not initialized File: /home/lemon/Descomp/MIPS_Intermediaria/ROMContent.mif Line: 1
-    Warning (113027): Addresses ranging from 32 to 63 are not initialized File: /home/lemon/Descomp/MIPS_Intermediaria/ROMContent.mif Line: 1
+    Warning (113027): Addresses ranging from 35 to 63 are not initialized File: /home/lemon/Descomp/MIPS_Intermediaria/ROMContent.mif Line: 1
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[15]" feeding internal logic into a wire File: /home/lemon/Descomp/MIPS_Intermediaria/memoriaRam.vhd Line: 17
     Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[14]" feeding internal logic into a wire File: /home/lemon/Descomp/MIPS_Intermediaria/memoriaRam.vhd Line: 17
@@ -1379,14 +1365,14 @@ Warning (21074): Design contains 14 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 20
     Warning (15610): No output dependent on input pin "SW[8]" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 20
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd Line: 20
-Info (21057): Implemented 2179 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2482 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 54 output pins
-    Info (21061): Implemented 2109 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 507 megabytes
-    Info: Processing ended: Thu Dec  7 10:54:54 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:17
+    Info (21061): Implemented 2412 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 497 megabytes
+    Info: Processing ended: Thu Dec  7 13:45:10 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
 
 

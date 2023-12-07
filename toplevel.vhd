@@ -240,6 +240,7 @@ UC_ULA : entity work.UC_ULA
 		ulaOp => UlaOp,
 		funct => Funct,
 		jr => MuxPCmais4BEQJR,
+		SHFT => ULAShift,
 		ULACtrl => UlaSelect
 	);
 
