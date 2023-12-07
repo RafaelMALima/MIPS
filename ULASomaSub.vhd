@@ -6,13 +6,17 @@ entity ULASomaSub is
     generic ( larguraDados : natural := 32 );
     port (
       entradaA, entradaB:  in STD_LOGIC_VECTOR(31 downto 0);
+		SHFT : in std_LOGIC_VECTOR(1 downto 0);
       seletor:  in STD_LOGIC_VECTOR(3 downto 0);
-      saida:    out STD_LOGIC_VECTOR(31 downto 0);
+      saidaULA:    out STD_LOGIC_VECTOR(31 downto 0);
       flagEQ : out std_logic
     );
 end entity;
 
 architecture comportamento of ULASomaSub is
+
+  signal saida : std_logic_vector(31 downto 0);
+  signal saidaShift : std_logic_vector(31 downto 0);
 
   signal carry_out_0_para_1 : std_logic;
   signal carry_out_1_para_2 : std_logic;
@@ -56,6 +60,26 @@ begin
 
   inverteB <= seletor(2);
   inverteA <= seletor(3);
+  
+MUXUlaOut : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+	port map(
+		entradaA_MUX => saida,
+		entradaB_MUX => saidaShift,
+		seletor_MUX => SHFT(0),
+		saida_MUX => saidaULA
+	);
+	
+ULAShifter : entity work.shifter32
+	port map (
+		shiftIN => entradaA,
+		shamt => entradaB(4 downto 0),
+		direct => SHFT(1),
+		shiftOUT => saidaShift
+	);
+
+  
+-- BIT A BIT
+
 
 flagEQ <= not (saida(0) or
 saida(1) or
@@ -89,6 +113,9 @@ saida(28) or
 saida(29) or
 saida(30) or
 saida(31));
+
+
+
 -- excessoes
   
 ULA_SINGLEBIT_BIT0 : entity work.UlaSingleBit 

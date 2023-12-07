@@ -2,9 +2,9 @@
 
 
 ENTREGA FINAL
-*** TODO GRUPO B
-**** TODO Load Upper Immediate
-***** TODO Testado e funcionando
+*** DONE GRUPO B
+**** DONE Load Upper Immediate
+***** DONE Testado e funcionando
 ***** DONE ARRUMAR TAMANHO DO MUX ULA MEM (data in do rd)
 ***** DONE CONECTAR O IMEDIATO NO MUX
 ***** DONE ARRUMAR TAMANHO DO VETOR DOS PONTOS DE CONTROLE
@@ -12,8 +12,8 @@ ENTREGA FINAL
 ***** DONE ARRUMAR OS PONTOS DE CONTROLE JÁ EXISTENTES
 ***** DONE ADICINAR NA UC DO MIPS A INSTRUÇÃO
 
-**** TODO Instruções lógico-aritméticas
-***** TODO Testadas e funcionando
+**** DONE Instruções lógico-aritméticas
+***** DONE Testadas e funcionando
 ***** DONE Pontos de controle no decoder prontos
 ****** DONE addi
 ****** DONE andi
@@ -23,9 +23,9 @@ ENTREGA FINAL
 ***** DONE ARRUMAR TAMANHO DO MUX DO RD PARA O R32
 ***** DONE ARRUMAR TAMANHO DA ENTRADA DA UNIDADE DE CONTROLE DA ULA
 ***** DONE ARRUMAR AS CONEXOES DOS PONTOS DE CONTROLE
-**** TODO Desvio
-***** TODO Testadas e funcionando
-***** TODO Pontos de controle no decoder prontos
+**** DONE Desvio
+***** DONE Testadas e funcionando
+***** DONE Pontos de controle no decoder prontos
 ****** DONE bne
 ******* DONE adionar mux com Z | not Z
 ******* DONE ARRUMAR TAMANHO DO VETOR DOS PONTOS DE CONTROLE
@@ -33,8 +33,16 @@ ENTREGA FINAL
 ******* DONE ARRUMAR TAMANHO DA ENTRADA DA UNIDADE DE CONTROLE DA ULA
 ******* DONE ARRUMAR AS CONEXOES DOS PONTOS DE CONTROLE
 ****** DONE JALAS
-****** TODO JR
-******* TODO ARRUMAR TAMANHO DO VETOR DOS PONTOS DE CONTROLE
-******* TODO ARRUMAR TAMANHO DA ENTRADA DA UNIDADE DE CONTROLE DA ULA
-******* TODO ARRUMAR AS CONEXOES DOS PONTOS DE CONTROLE
-******* TODO Arrumar tamanho do mux do prox pc
+****** DONE JR
+******* DONE ARRUMAR TAMANHO DO VETOR DOS PONTOS DE CONTROLE
+******* DONE ARRUMAR TAMANHO DA ENTRADA DA UNIDADE DE CONTROLE DA ULA
+******* DONE ARRUMAR AS CONEXOES DOS PONTOS DE CONTROLE
+******* DONE Arrumar tamanho do mux do prox pc
+
+*** DONE NOR
+*** TODO SHIFT
+**** TODO Testadas e funcionando
+**** DONE UcULA
+**** DONE Entrada nova no top level no UcULA e na ULA
+**** DONE Mux na saida entre SHIFT ou Ula
+**** TODO Componente de shift prontos

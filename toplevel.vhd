@@ -76,6 +76,7 @@ architecture arquitetura of toplevel is
 	signal EntradaBUla : std_logic_vector(31 downto 0);
 
 	signal UlaSelect : std_logic_vector(3 downto 0);
+	signal ULAShift : std_logic_vector(1 downto 0);
 	
 
 
@@ -257,8 +258,9 @@ ULA : entity work.UlaSomaSub
 		entradaA => SaidaRsBancoReg,
 		entradaB => EntradaBUla,
 		seletor => UlaSelect,
-		saida => ULAOut,
-		flagEQ => ULAFlagEqual
+		saidaULA => ULAOut,
+		flagEQ => ULAFlagEqual,
+		SHFT => ULAShift
 	);
 
 MEMORIA_RAM : entity work.memoriaRam

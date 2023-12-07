@@ -262,6 +262,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9]
 #====================================================================
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name VHDL_FILE shifter.vhd
 set_global_assignment -name VHDL_FILE bancoRegistradores.vhd
 set_global_assignment -name VHDL_FILE UcULA.vhd
 set_global_assignment -name VHDL_FILE shiftLeftExtSig.vhd

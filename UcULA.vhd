@@ -4,7 +4,8 @@ use ieee.std_logic_1164.all;
 entity UC_ULA is
   port ( ulaOp : in std_logic_vector(2 downto 0);
          funct : in std_logic_vector(5 downto 0);
-			jr : out std_logic;
+			JR : out std_logic;
+			SHFT : out std_logic_vector(1 downto 0);
          ULACtrl : out std_logic_vector(3 downto 0)
   );
 
@@ -29,8 +30,12 @@ begin
 				 "0001" when ulaOp = "100" else --ORI
 				 "0111" when ulaOp = "101" else --SLTI
 				 "0000";
+				 
 	JR <= '1' when ulaOp = "010" and funct = "001000" else
 			'0';
-
+			
+	SHFT <= "01" when ulaOp = "010" and funct = "000000" else -- Shlft
+			  "11" when ulaOp = "010" and funct = "000010" else -- Shrt
+			  "00";
 
 end architecture;
