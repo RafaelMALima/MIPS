@@ -1,5 +1,5 @@
 Archive Project report for toplevel
-Mon Nov 27 16:27:23 2023
+Thu Dec  7 13:56:20 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Mon Nov 27 16:27:23 2023 ;
+; Archive Project Status ; Successful - Thu Dec  7 13:56:20 2023 ;
 ; Revision Name          ; toplevel                              ;
 ; Top-level Entity Name  ; toplevel                              ;
 ; Family                 ; Cyclone V                             ;
@@ -46,22 +46,22 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------+
 ; Archive Project Messages ;
 +--------------------------+
-Info: File Set 'Source control' contains:
-    Info: Project source and settings files
+Info: File Set 'Custom' contains:
     Info: Automatically detected source files
+    Info: Project source and settings files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
 Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory /home/lemon/Descomp/MIPS_Intermediaria/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive '/home/lemon/Descomp/MIPS_Intermediaria/MIPS_intermediario.qar'
+Info: Generated archive '/home/lemon/Descomp/MIPS_Intermediaria/MIPS_FINAL.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'toplevel.archive.rpt'
 Info (23030): Evaluation of Tcl script /home/lemon/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 580 megabytes
-    Info: Processing ended: Mon Nov 27 16:27:23 2023
+Info: Quartus Prime Shell was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 581 megabytes
+    Info: Processing ended: Thu Dec  7 13:56:21 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -84,7 +84,9 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; muxGenerico4x1.vhd                                                      ;
 ; muxGenerico4x1SingleBit.vhd                                             ;
 ; registradorGenerico.vhd                                                 ;
+; ROMContent.mif                                                          ;
 ; ROMMips.vhd                                                             ;
+; shifter.vhd                                                             ;
 ; shiftLeftExtSig.vhd                                                     ;
 ; somaConstante.vhd                                                       ;
 ; somadorGenerico.vhd                                                     ;
